@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1{
+            width: 300px;
+            height: 300px;
+            border:5px solid black;
+            padding: 30px;
+
+            /* 박스 안에 border와 패딩이 들어간다고 보면 됨 즉 또다른 하나의 박스가 들어감 
+            /*box-sizing: content-box;*/
+        }
+
+        .box2{
+            width: 500px;
+            height: 300px;
+            border:5px solid black;
+            padding: 30px;
+            
+            /*박스의 사이즈가 안에 들어갈 내용에 따라 맞춰진다
+            /*보더와 패딩의 값이 추가 되어도 요소의 크기가 변하지 않는다
+            /*box-sizing: border-box;*/ 
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box1">
+
+    </div>
+
+    <div class="box2">
+        
+    </div>
+</body>
+</html>

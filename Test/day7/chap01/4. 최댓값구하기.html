@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 사용자가 입력한 세 개의 숫자 중 가장 큰 숫자를 출력하세요.
+
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function findMinNum(arr) {
+  
+  // initial value를 인자의 첫번째 index값으로 설정 해둔다.
+  let minNum = arr[0];
+  let length = arr.length; // 배열의 길이를 알 수 있다
+  
+  // for 문을 돌면서 값을 minNum과 비교해 적은 수를 minNum에 대입한다. 
+  for (let i = 0; i < length; i++) { //i는 0부터 시작하고
+  
+ // 부등호 위치를 바꾸면 maxNum을 구할 수 있다. 
+    if (arr[i] < minNum) {
+      minNum = arr[i];
+    }
+  }
+  return minNum;
+  console.log(minNum);
+}
+
+
+    </script>
+
+
+</body>
+</html>

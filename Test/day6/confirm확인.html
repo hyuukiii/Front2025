@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        // true false 반환
+        let result = confirm("정말 삭제 하시겠습니까?");
+
+        alert( result);
+        console.log(result); /*콘솔값을 볼 수 있음 (디버그라고 생각하면 될듯)*/
+
+        if( result == true){
+            alert("삭제합니다");
+        }else if ( result == false){
+            alert("취소되었습니다")
+        }
+    </script>
+    
+</body>
+</html>

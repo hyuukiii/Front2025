@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+
+
+*{
+  font-family: "Song Myung", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        /*가장 큰 박스*/
+        .wrap {
+                height: 1200px;
+                /*border: 1px solid black;*/
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                background-color: beige; 
+                
+        }
+        /*이미지1*/
+        .img1 img {
+                width: 300px;
+                height: 200px;
+                display: flex;
+                border-radius: 30%;
+                transform: rotate(20deg);
+
+                -webkit-filter: blur(3px);
+                filter: blur(3px);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+        }
+
+        .img1 img:hover {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
+
+        /*이미지2*/
+        .img2 img {
+                width: 300px;
+                height: 200px;
+                display: flex;
+                border-radius: 30%;
+                transform: rotate(330deg);
+                margin-left: 500px;
+                margin-top: 150px;
+
+                -webkit-filter: blur(3px);
+                filter: blur(3px);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+        }
+
+        .img2 img:hover {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
+        /*이미지3*/
+        .img3 img {
+                
+                width: 300px;
+                height: 200px;
+                display: flex;
+                border-radius: 30%;
+                transform: rotate(40deg);
+                margin-top: 800px;
+                margin-right: 300px;
+
+                -webkit-filter: blur(3px);
+                filter: blur(3px);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+        }
+        .img3 img:hover {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
+
+        .img4 img {
+                width: 300px;
+                height: 200px;
+                display: flex;
+                border-radius: 30%;
+                transform: rotate(50deg);
+                position: absolute;
+                top: 50%;
+                bottom: 0;
+                left: 0;
+                
+                -webkit-filter: blur(3px);
+                filter: blur(3px);
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+        }
+
+        .img4 img:hover {
+          -webkit-filter: blur(0);
+          filter: blur(0);
+        }
+
+
+        /*브랜드 이름 들어가는 박스*/
+        .brand-name {
+          /*border: 1px solid black;*/
+          width: 700px;
+          height: 400px;
+
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0px;
+          right: 29%;
+          top: 30%;
+        }
+
+        .Intro {
+                font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;;
+                text-transform: uppercase;
+                text-shadow: 0 8px 9px #c4b59d, 0px -2px 1px #fff;
+                color: #c47a35;
+                font-weight: bold;
+                border-radius: 20px;
+                width: 400px;
+                height: 300px;
+                box-sizing: border-box;
+
+                position: absolute;
+                left: 760px;
+                top: 3px; 
+        }
+
+     
+
+        .brand-name h1 {
+                      font-family: 'Staatliches', cursive;
+                      text-shadow: 5px 5px #363c43;
+                      font-style : italic;
+                      text-align: center;
+                      font-size: 150px;
+
+        }
+        .button1 {
+                  width: 200px;
+                  height: 200px;
+                  /*border: 1px solid black;*/
+                  position: absolute;
+                  bottom: 0;
+                  right: 40%;
+        }
+          .button1 button {
+                  width: 200px;
+                  height: 200px;
+                  border: none;
+                  border-radius: 30% ;
+
+                    background-color: rgb(192, 182, 168);
+                    cursor : pointer;
+          }
+
+          button:hover {
+          box-shadow: 0px 0px 30px 0px rgb(39, 40, 39); 
+          }
+
+        /*정보 들어가는 제일 큰 박스*/
+        .information {
+          /*border: 1px solid black;*/
+          height: 300px;
+          width: 300px;
+          position: absolute;
+          right: 2px;
+        }
+        /*정보칸 가로로 필요한 사진들 들어가는 박스*/
+        .information-box {
+                        /*border: 1px solid black;*/
+                        display: flex;
+                        margin-left: 100px;
+                        /*position: relative; */ 
+        }
+
+        .information-box > li {
+                             list-style: none;
+                              
+
+        } 
+        /*매뉴 사진 들어가는 박스*/
+        .menu1 {
+                border: 0.1px solid gray;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-left: 2px;
+
+                box-sizing: border-box;
+                position: relative;
+                display: inline-block;
+                cursor : pointer;
+        }
+
+        .menu1 img {
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           
+        } 
+
+
+        .menu1:hover {
+          box-shadow: 0px 0px 30px 0px rgb(188, 195, 190);    
+        }
+
+        /*히든박스*/
+        .drop-down {
+          display : none;
+          position : absolute;
+          z-index : 1;
+       }
+
+          .drop-down a {
+                    display: block;
+                    text-decoration : none;
+                    font-size: 14px;
+
+                    color: rgb(91, 85, 85);
+                    /*background-color : #ececec*/
+          }
+
+          .menu1:hover .drop-down {
+                display: block;
+          }
+
+       
+
+    </style>
+
+</head>
+
+<body>
+  <!--가장 큰 박스-->
+<div class="wrap">
+   <!--브랜드 로고-->
+   <div class="img1">
+    <img src="./여행사진2.avif">
+  </div>
+
+   <div class="img2">
+    <img src="./여행사진.jpg">
+  </div>
+
+   <div class="img3">
+    <img src="./여행사진3.jpg">
+   </div>
+   <div class="img4">
+    <!--<img src="./여행3.png"> -->
+    <img src="./여행3.png">
+   </div>
+
+    <!--정보 들어가는 큰 박스-->   
+   <div class="information">
+
+      <!--안쪽 가로줄 들어가는 박스--> 
+      <ul class="information-box">
+
+          <li class="menu1"> 
+            <img class="droptn" src="./갤러리로고.png">
+            <div class="drop-down">
+              <a href="">갤러리</a> 
+            </div>
+          </li>
+
+          <li class="menu1">
+             <img class="droptn" src="./로그인로고.png">
+             <div class="drop-down">
+              <a href="">로그인</a>
+            </div>
+             </li>
+
+          <li class="menu1"> 
+            <img class="droptn" src="./기록로고.png" alt="">
+            <div class="drop-down">
+              <a href="">기록</a>
+            </div>
+          </li>
+      </ul>
+
+
+   </div>
+
+   <div class="brand-name"> 
+        <h1>Gallery</h1><br>
+   <div class="Intro">
+    <h2>당신의 경험을 기록하고 찾아보세요<h2> <br>
+      <ul>
+         <li>사진과 동영상을 저장하세요</li> <br>
+         <li>경험했던 장소를 찾아보세요</li> <br>
+         <li>기억하고 싶은 장소를 저장하세요</li> <br>
+      </ul>
+
+   </div>     
+  </div>
+    <div class="button1">   
+    <button>다음으로 넘어가기</button>
+  </div>
+</div>  
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function loginCheck(){
+             //사용자 유효성 체크
+
+             //1.선택
+                    const frm = document.frm;
+                    const userIdE = frm.userId;
+                    
+                    const userId= userIdE.value; //인풋 태그 사이는 벨류 //
+                    console.log(userId);
+
+
+                    const userPasswordE = frm.userPassword;
+                    console.log(userPasswordE);
+
+                    const userPassword = userPasswordE.value;
+                    console.log(userPassword);
+
+             //2.내용확인
+             if( userId === ""){
+                alert("아이디를 입력하세요");
+                userIdE.focus();
+             } else if (userPassword === ""){
+                alert("비밀번호를 입력하세요")
+                userPasswordE.focus();
+             } else {
+                //서버로 요청하기
+                //frm.submit();
+                alert("로그인 중");
+             }
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+    <form name ="frm" action ="/login" method="post"> <!-- /login 서버의 동작 로그인 처리 -->
+        <input type="text" name="userId">
+        <input type="password" name="userPassword">
+        <button type = "button" onclick="loginCheck()"> 로그인 </button>
+    </form>
+
+    
+</body>
+</html>

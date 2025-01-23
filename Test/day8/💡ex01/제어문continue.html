@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <h2>countinue</h2>
+
+    <p>반복문 안에서 건너뛰기 하는 기능</p>
+
+    <script>
+        // 홀수합 구하기  (1 2 3 4 5 6 7 8 9 10)
+                    //    1 3 5 7 9
+
+        // 홀수의 합
+        // 1 2 3 4 5 6 7 8 9 10
+        // 짝수일 떄 합계변수에 누적되는 코드를 건너뛰게 하는 방식을 사용해서 홀 수합
+
+        let oddSum=0;
+        for(let i=1; i<=10; i++){
+            ooddSum = oddSum +i;
+
+            if(i %2 == 0){
+                continue; // 아래코드를 수행하지 않고 다음반복으로 진행하게 함
+            }
+            oddSum = oddSum +i;
+        }
+
+        alert(oddSum);
+
+    </script>
+    
+</body>
+</html>

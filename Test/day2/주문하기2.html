@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--폰트 출처-->
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+  <style>
+   /*폰트출처를 불러와 웹페이지에 저장해준다*/
+  *{ font-family: 'Nanum Pen Script', cursive; }
+  .wrap{
+            /*네모칸안에 글자들 어떻게 폰트 조절 하는지 */
+            width: 500px; /*웹페이지 전체 크기를 조절 */
+            padding: 10px; /*웹페이지 좌우 위 아래 공간 조절*/
+            border: 0.5px solid rgb(235,231,231); /*픽셀은 선명도 rgb는 3색 색깔을 설정*/
+            margin:0 auto;
+            border-radius: 5px; /*웹페이지의 모서리를 조절 해줌*/ /*이걸 이용하여 원을 만들 수 있음 */
+            /*height: 800px; */   /*나중에 제거 할 것 */     
+        }
+
+        .goods_info{
+
+            width:80%; /*사진을 오른쪽으로 옮겨준다*/
+            margin: 0 auto;
+            
+
+            /* height: 300px;*/   /*이것도 나중에 제거 할 것*/
+             /*border:1px solid black; */
+        }
+        /*이미지 영역 배경 채우기*/
+        .img{
+
+            width:400px; /*이미지의 너비를 설정해준다*/
+            height:350px; /*이미지의 높이를 설정해준다*/
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmUp47A6hZatY9_nD0Vmhd2auhiuiv7uhDDg&s);
+            background-size: cover; /* 백그라운드 이미지의 사이즈를 하나로 커버해준다*/
+            background-position: center; /* 배경 이미지를 가로 세로 중앙에 배치 */
+            margin: 0 auto;
+        }
+
+        .order_info{
+
+            width: 85%;
+            /*height: 500px; */   /* 제거 할 것 */
+            /*border:1px solid black; */
+            margin: 0 auto;
+        }
+
+        .order_info > div {
+          /*border: 1px solid black; */
+        }
+
+        input[type="text"] 
+                 width: 100%;
+                 padding: 10px;
+                 box-sizing: border-box;
+        }
+
+        select{
+             width: 100%;
+             padding: 10px;
+        }
+       
+        .order_btn {
+          width:  100%;
+          padding: 10px;
+          margin-top: 10px;
+          
+          border: none;
+          border-radius: 5px;
+        }
+
+        .price_info {
+          font-size: 20px;
+          font-weight: bold; 
+          color: blue;
+        }
+  </style>
+
+
+</head>
+<body>
+  <!--전체영역-->
+<div class="wrap">
+
+  <!-- 상품 정보 영역 -->
+  <div class="goods_info">
+      <!-- 상품 이미지 -->
+      <div class="img"></div>
+      <!-- 상품 정보 -->
+        <div>
+          <h1>대관령 황태</h1>
+              <p>겨울 내내 녹았다 얼었다를 반복한  맛 좋은 대관령 황태입니다.</p>
+              <p>가격 : <span class="price_info"> 30000원/10마리 </span></p>
+        </div>
+    </div>
+       
+  <!-- 주문 정보 영역 -->
+  <div class="order_info">    
+      <div> ---주문내역--- </div>
+      <div> 주문자 이름 <input type="text"></div>
+      <div> 수량
+           <select>
+            <option>선택하세요</option>
+            <option>1</option>
+            <option>2</option>
+           </select>
+      </div> 
+      <div>주문금액 <input type="text"></div>
+      <div>전화번호 <input type="text"></div>
+      <div> <button class="order_btn"> order </button> </div>
+
+      </div>
+
+</div>
+
+
+</body>
+</html>

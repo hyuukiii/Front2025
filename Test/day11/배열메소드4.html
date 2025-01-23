@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let arr =["금 30돈" , "5층빌라", "포르쉐"];
+
+        for(let i=0; i< arr.length; i++){
+            let item = arr[i];
+            console.log(item , i);
+        }
+
+        
+        function aa( t , z ){ // t = 배열의 요소 , z = 배열의 인덱스
+            console.log( t + z + "하이" );
+        }
+        
+        arr.forEach(aa) // forEach내부에서 전달된 aa함수 호출함 , aa함수 호출하면서 배열의 요소값 , 인덱스를 제공함
+
+        /* - - - - - - - - - - - - - - - - - - - - - */
+
+        arr.forEach(function(item, index){
+            console.log(item,index + "바이");
+        });
+
+         arr.forEach( function(a , b) {
+             console.log("안녕"+a,b);
+        });
+        
+            
+
+
+
+    </script>
+    
+</body>
+</html>

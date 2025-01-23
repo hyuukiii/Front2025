@@ -1,0 +1,365 @@
+html {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+body {
+    background-color: transparent;
+    margin: 0;
+    padding: 50px;
+}
+
+.login-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    pointer-events: auto;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.title {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInDown 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+form {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    font-size: 0.8rem;
+    color: #e74c3c;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    font-weight: 500;  /* */
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) + .error-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+input {
+    width: 100%;
+    padding: 12px 25px;
+    border: 2px solid #eee;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    width: 100%;
+    padding: 15px 27px;
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.login-error-message {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: none;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.photo-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    padding: 20px;
+}
+
+.photo-item {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 왼쪽 영역 사진들 */
+.photo-item:nth-child(1) {
+    top: 8%;
+    left: 5%;
+    animation-delay: 2.5s;
+}
+
+.photo-item:nth-child(2) {
+    top: 45%;
+    left: 3%;
+    animation-delay: 2.7s;
+}
+
+.photo-item:nth-child(3) {
+    bottom: 10%;
+    left: 8%;
+    animation-delay: 2.9s;
+}
+
+/* 중앙 영역 사진들 */
+.photo-item:nth-child(4) {
+    top: 12%;
+    left: 38%;
+    animation-delay: 3.1s;
+}
+
+.photo-item:nth-child(5) {
+    top: 50%;
+    left: 42%;
+    animation-delay: 3.3s;
+}
+
+.photo-item:nth-child(6) {
+    bottom: 8%;
+    left: 38%;
+    animation-delay: 3.5s;
+}
+
+/* 오른쪽 영역 사진들 */
+.photo-item:nth-child(7) {
+    top: 15%;
+    right: 5%;
+    animation-delay: 3.7s;
+}
+
+.photo-item:nth-child(8) {
+    top: 48%;
+    right: 8%;
+    animation-delay: 3.9s;
+}
+
+.photo-item:nth-child(9) {
+    bottom: 12%;
+    right: 5%;
+    animation-delay: 4.1s;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    filter: blur(10px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 각 사진별 회전과 모자이크 효과 */
+.photo-item:nth-child(1) img { transform: scale(0.8) rotate(-12deg); filter: blur(5px); }
+.photo-item:nth-child(2) img { transform: scale(0.8) rotate(9deg); filter: blur(5px); }
+.photo-item:nth-child(3) img { transform: scale(0.8) rotate(-15deg); filter: blur(5px); }
+.photo-item:nth-child(4) img { transform: scale(0.8) rotate(13deg); filter: blur(5px); }
+.photo-item:nth-child(5) img { transform: scale(0.8) rotate(-8deg); filter: blur(5px); }
+.photo-item:nth-child(6) img { transform: scale(0.8) rotate(11deg); filter: blur(5px); }
+.photo-item:nth-child(7) img { transform: scale(0.8) rotate(-14deg); filter: blur(5px); }
+.photo-item:nth-child(8) img { transform: scale(0.8) rotate(10deg); filter: blur(5px); }
+.photo-item:nth-child(9) img { transform: scale(0.8) rotate(-11deg); filter: blur(5px); }
+
+/* 호버 효과 */
+.photo-item:hover {
+    z-index: 1;
+}
+
+.photo-item:hover img {
+    filter: blur(0);
+    transform: scale(1) rotate(0deg);
+}
+
+/* 반응형 조정 */
+@media (max-width: 1400px) {
+    .photo-item:nth-child(4) { left: 35%; }
+    .photo-item:nth-child(5) { left: 40%; }
+    .photo-item:nth-child(6) { left: 36%; }
+}
+
+@media (max-width: 1200px) {
+    .photo-item {
+        width: 220px;
+        height: 220px;
+    }
+    /* 위치 재조정 */
+    .photo-item:nth-child(4) { left: 33%; }
+    .photo-item:nth-child(5) { left: 38%; }
+    .photo-item:nth-child(6) { left: 35%; }
+}
+
+@media (max-width: 768px) {
+    .photo-item {
+        width: 180px;
+        height: 180px;
+    }
+    /* 모바일 위치 조정 */
+    .photo-item:nth-child(4) { left: 30%; }
+    .photo-item:nth-child(5) { left: 35%; }
+    .photo-item:nth-child(6) { left: 32%; }
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* 감성적인 태그라인 스타일 */
+.tagline {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1s;
+    position: relative;
+}
+
+/* 태그라인 밑줄 효과 */
+.tagline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 40px;
+    height: 1px;
+    background: #2c3e50;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+/* 태그라인 애니메이션 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 태그라인 호버 효과 */
+.tagline:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* 태그라인 반응형 */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+}

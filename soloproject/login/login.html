@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Roam Diary</title>
+    <link rel="stylesheet" href="login.css"> <!-- css 연걸하기 -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="photo-grid">
+      <div class="photo-item"><img src="./여행사진1.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진2.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진3.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진4.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진5.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진6.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진7.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진8.JPG" alt="travel"></div>
+      <div class="photo-item"><img src="./여행사진9.JPG" alt="travel"></div>
+    </div>
+
+    <div class="login-container">
+      <h1 class="title">Roam Diary</h1>
+      <p class="tagline">당신의 추억과 공간을 저장하세요</p>
+
+      <!-- form 태그 시작 : 메소드 "post" 시작해서 -->
+      <form method="post" action="/login" novalidate>
+        <div class="login-error-message">아이디 또는 비밀번호를 다시 확인해주세요.</div>
+        <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <span class="error-message">아이디를 입력하세요.</span>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <span class="error-message"> 비밀번호를 입력하세요 </span>
+        </div>
+
+        <button type="submit">Login</button>
+      </form>
+      <!-- form 태그 끝 : 버튼 태그의 타입 제출 -->
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

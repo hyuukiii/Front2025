@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        사칙연산 계산기
+        1. 사용자의 첫 입력은 숫자 두번쨰 입력은 연산자 3번째 입력은 숫자를 입력 할 수 있다
+        2. + - * / (더하기 빼기 곱하기 나누기) 기능이 있어야한다
+        3. 사용자의 입력 값에 따라 값이 출력된다
+        4.위의 코드애서 while 문을 써서 사용자가 원하는 값을  다 입력 후에 초기화면으로 돌아간다.
+
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+
+    <script>
+        while(true) {
+        const num1 = parseFloat(prompt("첫 번째 숫자를 입력해주세요"));
+        const num2 = parseFloat(prompt("두 번째 숫자를 입력해주세요"));
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("유효하지 않은 숫자 입니다.");
+                continue;
+            }
+
+            const operations =prompt("+ (더하기) , - (뺴기) , * (곱하기) , / (나누기) 중에 선택 해주세요.\n 나가기를 입력 하시면 프로그램을 종료 합니다.");
+            
+            if(operations === "나가기") {
+                alert("프로그램을 종료합니다.");
+                break;
+            }   
+    
+
+        switch(operations) {
+
+                case "+" : 
+                    alert("두 수의 합은" + (num1 + num2) + " 입니다.");
+                    break;
+
+                case "-" : 
+                    alert("두 수의 빼기는 " + (num1 - num2) + " 입니다.");
+                    break;
+                
+                case "*" : 
+                    alert("두 수의 곱은 " + (num1 * num2) + " 입니다.");
+                    break;
+                
+                case "/" : 
+                    if(num2 === 0){
+                            alert("0으로 나눌 순 없습니다")
+                        } else {
+                            alert("두 수의 나누기는 " + (num1 / num2) + " 입니다.");
+                        }
+                        break;
+                
+                    default :
+                        alert("올바른 연산자를 선택 해주세요");
+                        break;
+        }
+        alert("초기면으로 돌아갑니다.");
+    }        
+
+        
+
+       /*
+            if(isNaN(num1) || typeof(operations) || isNaN(num2)) {
+            alert("숫자입력에는 숫자를 입력해줘야하고 , 사칙연산기능에는 사칙연산 기능만 입력 가능합니다.");
+
+            const sum1 = num1 + num2;
+            const sum2 = num1 - num2;
+            const sum3 = num1 * num2;
+            const sum4 = num1 / num2;
+
+            alert("두 수의 합은 " + sum1 + " 입니다.");
+            alert("두 수의 빼기는 " + sum2 + " 입니다.");
+            alert("두 수의 곱은 " + sum3 + " 입니다.");
+            alert("두 수의 나누기는 " + sum4 + " 입니다.");
+        } */
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        h1 {
+            margin: 0px;
+            letter-spacing: 5px; /*글자 수의 간격을 조정한다*/
+
+        }
+
+        .wrap {
+                 width: 800px;
+                 border: 1px solid black;
+        } 
+        
+        .wrap  div {
+                    /*height: 200px;*/
+                    border: 1px solid red;
+        }
+
+        /*line1 스타일*/
+        .line1 {
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .line2 {
+                display: flex;
+                text-align: center;
+
+        }
+        
+        .line2_col1 {
+                     width: 50%;
+                     height: 200px;
+                     border: 1px solid black;
+        }
+
+        .line2_col2 {
+                    width: 50%;
+                    height: 200px;
+                    border: 1px solid black;
+
+        }
+
+        .line2_col2 textarea {
+                               width: 100%;
+                               height: 130px;
+                               box-sizing: border-box; 
+
+        }
+
+        /*.line2_col1  img {
+                            width: 100%;
+                            height: 100%;
+                            이미지 단독으로 쓸 떈 쓰지 못함 부모의 클래스가 있어야함
+                            object-fit : cover;
+                            object-fit: contain;  이미지가 짤릴 수 있음
+        } 
+*/
+
+        .line2_col1  img {
+                            width:  200px;
+                            height: 130px;
+        }
+
+        .line3 {
+                    display: flex;
+                    text-align: center;
+                    padding: 10px;
+
+        }
+
+        .line3_col1 { 
+                        width: 33.3%;
+                        /*height: 100px;*/
+        }
+
+        .line3 h4 {
+                    margin: 0px;
+        }
+        .line3 input {
+                        width: 100%;
+                        height: 40px;
+                        box-sizing: border-box;
+        }
+
+        .line4 {
+                padding: 10px;
+                box-sizing: border-box;
+
+        }
+        
+        .line4 h4 {
+                    margin-top: 0px;
+        }
+
+        .line4 textarea {
+                            width: 100%;
+                            height: 100px;
+                            box-sizing: border-box;
+        }
+
+        .line5 {
+                padding: 10px;
+                box-sizing: border-box;
+        }
+        .line5 textarea {
+                width: 100%;
+                height: 100px;
+                box-sizing: border-box;
+        }
+        
+        .line5 h4 {
+                    margin-top: 0px;
+        }
+
+    </style>
+
+</head>
+<body>
+     <div class="wrap">
+
+        <div class="line1"> <h1>REVIEW</h1>
+        </div>
+
+        <div class="line2">
+            <!--이미지 칸-->
+            <div class="line2_col1">
+                <h4>이미지</h4>
+                <img src="./빵.jpg">
+            </div>
+
+            <!--내용 칸-->
+            <div class="line2_col2">
+                <h4>맛평가</h4>
+                <textarea name=" " id=""></textarea>
+            </div>
+        </div>
+
+        <div class="line3">
+            <div class="line3_col1">
+                <h4>연령대</h4>
+                <input type="text">
+            </div>
+            <div class="line3_col1">
+                <h4>맛평가</h4>
+                <input type="text">
+            </div>
+            <div class="line3_col1">
+                <h4>한줄평</h4>
+                <input type="text">
+            </div>
+        </div>
+
+        <div class="line4">
+            <h4>판매자 정보</h4>
+            <textarea name="" id=""></textarea>
+        </div>
+
+        <div class="line5"> 
+            <h4>더 나누고 싶은 정보</h4>
+            <textarea name="" id=""></textarea>
+        </div>
+
+
+     </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+                border: 1px solid black;
+                width: 900px;
+                border-collapse: collapse; /*표 안에 있는 값들을 정렬 해준다*/
+                margin: 0 auto;
+                                
+        }
+
+        tr {
+              border:  1px solid black;
+            }
+          
+        th {
+            background-color: rgba(171, 191, 188, 0.996);
+        }    
+
+        td {
+            padding: 20px;
+            border: 1px solid black;    
+        }
+
+        /*td의 첫번쨰 요소만 적용한다 단, 만약 그 박스에 또 박스에 td가 있다면 적용애 유의해야한다
+         왜냐 눈에 보이는 코드는 td가 하나라고 생각하겠지만 tr안에 th가 있고 td가 있기에 😩적용 불가*/
+
+        td:nth-child(1) {
+            text-align: center; 
+        }
+
+        input {
+                padding: 10px;
+        }
+
+   select,button {
+          padding: 10px;
+
+   }
+   li {
+     list-style: none;
+   }
+    </style>
+</head>
+<body>
+<!--tr이 열 th가 대제목 열 td가 행-->
+<table>
+        <caption><p><li>회원가입</li></p></caption>
+    <tr>    
+        <th>이름</th>
+        <td><input type="text" placeholder="입력하세요."></td>
+    </tr>
+
+    <tr>
+        <th>아이디</th>
+        <td><input type="text" placeholder="입력하세요"></td>
+    </tr>    
+
+    <tr>
+        <th>비밀번호 </th>
+        <td><input type="password" placeholder="입력하세요">
+            <button>중복확인</button>
+            <p>⚠️비밀번호는 8자리 이상이어야 합니다.⚠️</p>
+        </td>
+    </tr>
+
+    <!--이메일 행 시작-->
+    <tr>
+        <th>이메일</th>
+            <td>
+                <input type="text">@<input type="text">
+                <select>
+                      <option>선택하세요</option>
+                      <option value="naver.com">네이버</option>
+                      <option value="google.com">구글</option> 
+                </select>
+                    <button>중복확인</button>
+            </td>
+    </tr>
+
+    
+    <tr>
+        <th>학년/반</th>
+        <td>
+            <select>
+                    <option>학년</option>
+                    <option value="1">1학년</option>
+                    <option value="2">2학년</option>
+                    <option value="2">3학년</option>
+            </select>
+               
+          
+            <select>
+                    <option>반</option>
+                    <option value="1">1반</option>
+                    <option value="2">2반</option>
+                    <option value="3">3반</option>
+            </select>
+        </td> 
+    </tr>
+    <tr>
+        <td colspan="2"> <button>완료</button> <button>뒤로가기</button> </td> 
+    </tr>
+
+</table> 
+</body>
+</html>

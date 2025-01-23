@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+  <!---오징어 게임
+    1. 변수: 이정재 이병헌 박성훈
+    2. 컴퓨터는 1~100사이의 숫자를 랜덤으로 지정한다
+    3. 이정재 이병헌 박성훈 중에 누가 맞추는지 사용자는 선택한다.
+    4. 셋 중에 한명만 맞추면 끝난다 
+    
+   1. 이병헌 박성훈 이정재 변수 생성
+   2.컴퓨터는 1~100까지의 숫자의 난수를 생성한다
+   3.이병헌과 박성훈과 이정재들도 이 값들을 맞춰야한다.
+   4.user는
+
+    
+    --->
+
+    <script>
+
+        
+
+        //1~100까지의 랜덤수를 컴퓨터는 낸다
+        const computer = Math.floor(Math.random()*100) +1;
+
+        //우승자 선택 (1 2 3)명 중에 한명
+        const winner = Math.floor(Math.random()*3) +1;
+
+        let 이병헌 , 이정재 , 박성훈;
+
+        let user = prompt("컴퓨터는 1~100까지 난수를 설정합니다.\n이정재 , 이병헌 , 박성훈이 게임에 참여 합니다.\n누가 우승하는지 맞춰보세요.");
+        
+        if(winner === "이병헌"){
+            이병헌 = winner;
+            이정재 = Math.floor(Math.random()*100)+1;
+            박성훈 = Math.floor(Math.random()*100)+1;
+            alert("이병헌이 우승했습니다!");
+
+        } else if(winner === "이정재"){
+            이병헌 = Math.floor(Math.random()*100)+1;
+            이정재 = winner;
+            박성훈 = Math.floor(Math.random()*100)+1;
+            alert("이정재가 우승했습니다!");
+        } else if(winner === "박성훈"){
+            이병헌 = Math.floor(Math.random()*100)+1;
+            이정재 = Math.floor(Math.random()*100)+1;
+            박성훈 = winner;
+            alert("박성훈이 우승했습니다!");   
+        }
+
+         /*
+         if(이병헌 === winner){
+            alert("이병헌이 우승했습니다!");
+         }else if(이정재 === winner){
+            alert("이정재가 우승했습니다!");
+         }else if(박성훈 === winner){
+            alert("이정재가 우승했습니다!");
+         } 
+        */
+
+
+        /*  let 이정재 = computer; 
+            let 이병헌 = computer;
+            let 박성훈 = computer;
+
+            console.log("컴퓨터의 값:",computer);
+            console.log("이정재의 값:", 이정재);
+            console.log("이병헌의 값:", 이병헌);
+            console.log("박성훈의 값:", 박성훈);
+            */
+
+    </script>
+    
+  
+    
+</body>
+</html>

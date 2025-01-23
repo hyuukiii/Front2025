@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+        1. 사용자에게 두개의 숫자를 입력 받는다.
+        2. 두개의 숫자를 입력 받으면 거기에 맞는 합을 알려준다
+        3. 
+        -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+    <script>
+
+        while(true){
+           
+            const num1 = parseFloat(prompt("첫 번째 숫자를 입력하세요."));
+            const num2 = parseFloat(prompt("두 번째 숫자를 입력하세요."));
+
+            if(isNaN(num1) || isNaN(num2)) {
+                alert("잘못입력 하셨습니다. 숫자를 입력 해주세요");
+        }   else {
+                const sum = num1 + num2;
+                alert(num1 + "과" + num2 + "의 합은" + sum + " 입니다.");
+            }
+
+        }
+
+
+
+
+
+
+
+        /*
+        while(true) {
+            let score1 =prompt("두 숫자의 합을 알 수 있습니다. 숫자 두개를 선택해주세요");
+            let score2 =prompt("하나더 입력해주세요.");
+            break;
+        }
+         */   
+
+        /*
+        let total = 0;
+        let score1;
+        let score2;
+
+
+        score1 =prompt("두 숫자의 합을 알 수 있습니다. 숫자 두개를 선택해주세요");
+        score2 =prompt("하나더 입력해주세요.");
+        for (let i=1; i<=100; i++) {
+             score1 = i;
+                if(score1 == i) {
+                      score1(i);
+                }
+            for(let j=1; j<=100; j++){
+                score2 = j;
+                if(score2 == j) {
+                    score2(j);
+                }
+                alert(score1 + " 과" + score2 + " 의 합은 " + score1 + score2 + " 입니다");
+            }
+        }
+        */
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change1(){
+            let wrap = document.querySelector(".wrap1");
+
+            wrap.innerHTML = "새로운 내용";
+
+            wrap.style.width = "100px";
+            wrap.style.height = "100px";
+            wrap.style.backgroundColor = "red";
+            
+        }
+        
+        function change2(){
+
+         let wrap = document.querySelector("#wrap2");
+
+            wrap.innerHTML = "새로운 내용";
+
+            wrap.style.width = "100px";
+            wrap.style.height = "100px";
+            wrap.style.backgroundColor = "black";
+        }
+
+
+    </script>
+
+</head>
+<body>
+            <h2> querySelector </h2>
+            <p> 한개를 반환한다(여러개를 쓰면 제일 처음 썼던걸 반환한다) </p>
+
+        <div class="wrap1"></div>
+        <div id="wrap2"></div>
+
+        <button onclick="change1()"> wrap1 변경 </button>
+        <button onclick="change2()"> wrap2 변경 </button>
+
+
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function calcAmount(){
+            // 1.class가 price 모두 선택하기
+
+            // 2. 반복문
+            // - 배열의 요소 꺼내오기
+            // - 요소의 내용 가져오기
+            // - 누적
+            
+            // 3. 출력요소에 내용으로 넣기
+
+            let priceArr = document.querySelectorAll(".price");
+
+            let sum =0; //총금액 초기화
+
+             priceArr.forEach(function(item){
+                let price = parseInt(item.innerHTML)
+                sum += price
+             });
+
+                console.log("전체금액", sum);
+
+                const totalAmt = document.querySelector("#totalAmt");
+                totalAmt.innerHTML = sum;
+                console.log (totalAmt);
+                alert("총금액은 "+ sum);
+
+        }
+    
+
+    </script>
+
+</head>
+<body>
+    <h2> querySelectorAll로 선택하기 </h2>
+
+    <div class="price"> 100</div>
+    <div class="price"> 150</div>
+    <div class="price"> 200</div>
+    <div class="price"> 100</div>
+    <div class="price"> 300</div>
+
+    주문금액 <span id="totalAmt"> </span>
+
+    <button onclick="calcAmount()"> 주문금액 </button>
+    
+</body>
+</html>

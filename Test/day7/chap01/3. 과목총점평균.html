@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 이름, 국어, 영어, 수학 3과목이 입력될 때   총점과  평균을 출력하기 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        let name = "윤현기";
+
+        let kor = 83;
+        let eng = 85;
+        let math = 90;
+
+        let total = kor + eng + math;
+        let avg = total/3;
+
+
+        name = prompt("이름을 입력하세요.");
+        
+        //if, switch
+        while( true){
+            let  menu = prompt(" 1. 과목당점수 , 2. 총점 , 3. 합계 "); 
+            
+        switch(menu) { 
+            case "1":
+            alert("1.국어: "+ kor +"\n2.영어 :" + eng +"\n2.수학 :" + math);
+            break;
+
+            case "2":
+                alert("3과목의 합계는 " + total +" 입니다.");
+                break;
+            case "3":
+                alert("3과목의 평균은 "+ avg +" 입니다.");
+                break;    
+
+        } if(menu >= 4){
+         alert("잘못 선택 하셨습니다.");
+         alert("프로그램을 종료 하겠습니다.");
+         break;      
+    }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+        /* 방법1 */
+
+        /*alert("이름: " + name +"\n국어점수: "+ kor + "\n영어점수: " + eng + "\n수학점수 : " + math
+                + "\n총합 :" + total + "\n평균점수 :" + avg
+        );*/
+
+        /*let 수학 = 85;
+        let 국어  = 87;
+        let 영어  = 82;
+
+        let 합계 = 수학 + 국어 + 영어; 
+
+        while(true){
+            let name = "윤현기";
+            name = prompt("이름을 입력 하세요");
+            break;
+        }
+        
+        while(true){
+             prompt(" 원하는 항목을 선택 해 주세요 1. 과목당 점수  2. 합게  3. 평균 ");
+                수학 = prompt("수학 점수는 "+ 수학 + " 점 입니다.");
+                국어 = prompt("국어 점수는 " + 국어 + " 점 입니다.");
+                영어 = prompt("영어 점수는 "+ 영어 + " 점 입니다.");
+
+                total=prompt("총합은 " + total + " 입니다"); 
+
+         } - - - - - - - - - - - - - - - - - - - */
+        
+        
+
+        /*let math = 85;
+        let eng = 87;
+        let kor = 89;
+        let avg = 3;
+        let all = (math + Eng + kor); */
+
+
+    </script>
+    
+</body>
+</html>

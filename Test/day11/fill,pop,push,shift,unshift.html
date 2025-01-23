@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // fill() 배열의 요소를 특정 값으로 채우기
+        let arr1 = new Array(5);
+
+        arr1.fill(3);
+        console.log ( "fill함수 : "+arr1 );
+        console.log ( "- - - - - - - - -" );
+
+        // pop():배열요소 꺼내기 (맨 뒤) , push(); => 배열요소 넣기(맨 뒤)
+
+        let arr2 = [];
+        
+        // arr[0] = 10;
+
+        arr2.push(10); // 순서대로(0 인덱스 부터 ) 배열에 넣기
+        arr2.push(20);
+        
+        console.log("push함수 : "+arr2);
+
+        console.log ( "- - - - - - - - -" );
+
+        let result1 = arr2.pop(); // 원본 배열이 변경 됨
+        console.log("pop함수 : "+result1);
+
+        console.log("pop함수 : "+arr2);
+        console.log ( "- - - - - - - - -" );
+
+         // unshift() : 맨앞에 넣기 , shift() 맨 앞에서 꺼내기
+
+                let arr3 = [10, 20];
+
+                arr.unshift(5);
+
+                console.log("unshift함수 : "+arr);
+
+                let result2 = arr.shift();
+                console.log("shift함수 : "+ result2);
+                console.log("shift함수 : "+ arr3);
+
+ 
+        /*arr[0] = 1;
+        arr[1] = 1;
+        arr[2] = 1; 
+        console.log(arr);
+        */
+        /*
+        for(let i=0; i< arr.length; i++){
+            arr[i] = 2;
+        }
+        console.log(arr); */
+    </script>
+    
+</body>
+</html>

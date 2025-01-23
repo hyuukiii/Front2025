@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <script>
+        // 기존배열의 내용을 가지고 변형된 새로운 배열 만들기
+
+        //이름 배열 -> ~님 => 새로운 배열
+
+        let names = ["윤현기" , "이동우" , "임형택" , "오윤석"]; //names에 배열 생성하고 안에 값을 넣음
+
+        let newNames = []; // newNames이라는 공백이 담긴 배열을 넣음
+
+        for(let i=0; i <names.length; i++) { // i=0부터 시작하고 names.length 까지 증감한다
+            newNames[i] = names[i] + "님"; // names 배열의 각 값에 "님"을 추가하여 newNames 배열에 저장
+        }
+        alert(newNames);
+
+
+    /*
+
+    for 루프 동작 예시:
+    첫 번째 반복 (i = 0): newNames[0] = names[0] + "님" → newNames[0] = "윤현기님"
+    두 번째 반복 (i = 1): newNames[1] = names[1] + "님" → newNames[1] = "이동우님"
+    세 번째 반복 (i = 2): newNames[2] = names[2] + "님" → newNames[2] = "임형택님"
+    네 번째 반복 (i = 3): newNames[3] = names[3] + "님" → newNames[3] = "오윤석님"
+    
+    */
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names = ["이동우", "박시우", "권지용" ,"대성" ,"태양"];
+
+        let newNames =[];
+
+        for(let i=0; i<names.length; i++){
+            let item = names[i];
+            item += "님";
+            newNames[i] = item + "님";
+        }
+
+        console.log(names);
+        console.log(newNames);
+
+        // - - - - - - - - - - - - - - - - - - - - - - - //
+        
+       let newNames2= names.map( function(item , index) {
+            return item + "씨";
+        });
+        
+        console.log(newNames2);
+
+        // - - - - - -- - - - - - - - - - - - - - - - - //
+
+        let newNames3 = names.map((item, index)=>{return item+" 씨 ^^ "});
+
+        console.log(newNames3);
+
+        // - - - - - - - - - - - - - - - - - - - - - - - //
+
+
+        let newNames4 = names.map(item => item + "님^^**");
+        console.log(newNames4);
+
+
+
+
+    </script>
+</body>
+</html>

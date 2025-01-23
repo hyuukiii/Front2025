@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1> CPU:일하는 사람 </h1>
+    <li> 컴퓨터의 뇌 - 작업을 진행하는 주체 </li>
+
+    <h1> 보조기억장치 SSD , HDD : 서랍 </h1>
+    <li> 상대적으로 저장공간은 넓고 접근속도는 느림 </li> 
+    <li> 소프트웨어가 저장되는 곳</li>
+
+    <h1> 메모리(RAM) :책상 위 공간 </h1>
+     <li> 상대적으로 저장공간은 좁고 접근 속도는 빠름 </li>
+     <li> 사람(cpu)이 서랍(보조기억장치)에 든 데이터를 꺼내 올려두고 작업을 하는 공간 </li>
+     <li> 변수와 상수를 비롯한 데이터들이 이곳에 만들어지고 사용됨</li>
+     <li> 메모리를 효율적으로 사용하기 위한 지식과 노력 필요</li>
+
+    <script>
+
+        const SALUTATION = 'Hello,';
+        let person = '철수';
+        
+        console.log(SALUTATION,person);
+
+
+        person = '영희';
+        console.log(SALUTATION,person);
+
+       // let x;
+        // console.log(x);
+
+        // x = 1;
+        // console.log(x);
+
+        // 기존 위치에 새 값을 넣는 것이 아님
+        // 차지하는 자리가 다른 크기의(자료형이 다른)데이터가 재할당될 수 있으므로
+
+
+        let x = 1;
+        let y = x;
+        console.log('변경 전',x,y);
+        
+        x = 'Hello!';
+        console.log('변경 후',x, y);
+
+        // 똑같은 주머니를 만들 수가 없음.
+
+        // let x = 1;
+
+        //선언 하기 전 코드를 사용 할 수는 없음.
+
+        // console.log(xyz);
+        // let xyz = 1;
+
+        //💡 상수
+        // 담김 값이 바뀔 수 없는 주머니
+        // ⭐️ const사용
+        //  흔히 대문자로 명명 - 여러 곳에서 사용될 공통 값인 경우
+
+        const PI = 3.14;
+        console.log('원주율:',PI)
+
+        // 선언하기만 하는것은 불가능
+
+        // const IU;
+        // IU = 27;
+
+        // 상수는 값의 변경 불가
+        
+        // const IU = 27;
+        // IU = 38;
+        // console.log(IU);
+
+        // ⭐️⭐️⭐️ 값이 바뀔 일이 없는 데이터는 상수로 선언할 것
+
+        let  a = 1 , b = 2 , c = 3;
+        const X = 4, Y = 5 , Z = 6;
+
+        console.log(a, b, c);
+        console.log(X, Y, Z);
+
+        // 식별자 : 상수와 변수 등의 이름
+        // 영문 한글 및 유니코드 글자 숫자 사용 가능
+        // 특수문자는 $ 또는 _
+        // 😩 숫자로 시작 할 수 없음
+        // 😩 공백 사용 불가
+
+        const 이름 = '홍길동';
+        let 나이 = 20;
+
+        console.log(이름,나이);
+        
+
+
+    </script>
+    
+</body>
+</html>

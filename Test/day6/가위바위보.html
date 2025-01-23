@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let user, computer, result ; /* user computer result 변수 지정 */
+        
+          while(true) {  /* 참의 값 일때 */
+
+          user = prompt( "가위 바위 보 중에서 선택하세오 0 1 2 "); /* 0 1 2 중에서 사용자의 값을 받는다 */
+
+          computer  =  Math.floor(  Math.random() *3 ) ;  /*컴퓨터는  3(0 1 2)중에서 소숫점을 버린 정수들을 출력한다  */
+
+          if( user != computer) break; /*만약 유저의 값과 컴퓨터의 값이 다르다면 브레이크가 걸리고 while반복문을 벗어난다*/
+
+        }
+         
+        if(user==0){   /* user의 값이 0일때 */
+
+             if(computer==1){ /* 컴퓨터의 값이 1 일때 */
+
+                result="사용자 승"; /* 사용자 승이라는 값을 출력 */
+
+             } else { 
+
+                result="사용자  패" /* user의 값이나 computer의 값이 거짓 값을 경우 사용자 패를 출력한다 */
+
+             }
+
+         } else if(user ==1) { /* 다른 조건문으로 user의 값이 1과 같을 경우 */
+             if(computer==2) { /* 조건문으로 computer의 값이 2일 때 */
+                result="사용자 승"; /* 사용자 승이 출력된다 */
+             } else{   /* 값이 거짓일 경우 */
+                result="사용자  패" /* 사용자 패가 출력이 된다 */
+             }
+          } else  if( user==2){ /* 또 다른 조건문으로 user의 값이 2일때 */
+             if(computer==0){ /* 만약 컴퓨터의 값이 0일 때*/
+                result="사용자 승"; /* 사용자 승을 출력한다. */
+             }else{
+                result="사용자  패" /* 값이 거짓이라면 사용자 패를 출력한다. */
+             }
+          }
+          
+         alert( result);
+
+      </script>
+    
+</body>
+</html>
