@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>준비중 - AutoParts DB</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .preparing-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column; /*⭐️*/
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .preparing-icon {
+            font-size: 5rem;
+            margin-bottom: 2rem;
+            animation: spin 4s linear infinite;
+        }
+
+        .preparing-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .preparing-text {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .back-button {
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preparing-container">
+        <i class="fas fa-cog preparing-icon"></i>
+        <h1 class="preparing-title">서비스 준비중</h1>
+        <p class="preparing-text">더 나은 서비스 제공을 위해 준비중입니다.<br>조금만 기다려주세요!</p>
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> 메인으로 돌아가기
+        </a>
+    </div>
+</body>
+</html> 
